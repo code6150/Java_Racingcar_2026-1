@@ -52,8 +52,6 @@ public class Application {
             throw new IllegalArgumentException("숫자안적음");
         }
 
-
-
         System.out.printf("%n실행 결과%n");
         for (int i=n;i>0;i--) {
             for (Car car : cars) {
