@@ -9,7 +9,7 @@ public class Gaming {
     private final List<Car> cars;
     public Gaming(List<Car> cars, int n){
         this.cars = cars;
-        this.n = n
+        this.n = n;
     }
 
     public void start() {
