@@ -3,7 +3,11 @@ import java.util.*;
 
 public class Application {
     public static void main(String[] args) {
+        InputView input = new InputView();
+        InputValidator iv = new InputValidator();
 
+        List<Car> cars = iv.CarNamesValidator(input.inputCarName());
+        int n = iv.IntegerValidator(input.inputRepeatN());
 
 
         Gaming g = new Gaming(cars, n);

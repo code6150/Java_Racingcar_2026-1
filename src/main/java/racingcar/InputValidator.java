@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 public class InputValidator {
-    public void CarNamesValidator(String name) {
+    public List<Car> CarNamesValidator(String name) {
         List<Car> cars = new ArrayList<>();
         for (String a : name.split(",")) {
             CarNameValidator(a);
@@ -15,6 +15,7 @@ public class InputValidator {
         Set<String> dupCheck = new HashSet<>();
         for (Car c : cars){dupCheck.add(c.getName());}
         if (dupCheck.size() != cars.size()) {throw new IllegalArgumentException("중복이름있음");}
+        return cars;
     }
 
     private void CarNameValidator(String name) {
@@ -23,11 +24,12 @@ public class InputValidator {
         if (name.contains(" ")) {throw new IllegalArgumentException("공백포함됨");}
     }
 
-    public void IntegerValidator(String n) {
+    public int IntegerValidator(String n) {
         int count;
         try {count = Integer.parseInt(n);}
         catch (NumberFormatException e) {throw new IllegalArgumentException("숫자안적음");}
 
         if (count <= 0) {throw new IllegalArgumentException("0번이하");}
+        return count;
     }
 }
