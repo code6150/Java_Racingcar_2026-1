@@ -3,24 +3,6 @@ package racingcar;
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.*;
 
-class Car {
-    String name;
-    int moveCount;
-
-    public Car(String name) {
-        this.name = name;
-        this.moveCount = 0;
-    }
-
-    public void move() {
-        moveCount++;
-    }
-
-    public int getMoveCount() {
-        return moveCount;
-    }
-}
-
 public class Application {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
