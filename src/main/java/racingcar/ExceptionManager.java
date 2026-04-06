@@ -6,5 +6,7 @@ public class ExceptionManager {
         if (name.length() > 5) {throw new IllegalArgumentException("이름5자초과됨");}
         if (name.contains(" ")) {throw new IllegalArgumentException("공백포함됨");}
     }
+    public void NumberInputExcept(int i) {
 
+    }
 }

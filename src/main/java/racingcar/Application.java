@@ -36,7 +36,8 @@ public class Application {
         for (int i=n;i>0;i--) {
             for (Car car : cars) {
                 int ran = Randoms.pickNumberInRange(0,9);
-                if (ran >= 4) {car.move();}
+                final int movingNumber = 4;
+                if (ran >= movingNumber) {car.move();}
                 String howMove = "-".repeat(car.getMoveCount());
                 System.out.printf("%s : %s%n", car.name,howMove);
             }
