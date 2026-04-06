@@ -5,7 +5,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 import java.util.List;
 
 public class Gaming {
-    private int n;
+    private final int n;
     private final List<Car> cars;
     public Gaming(List<Car> cars, int n){
         this.cars = cars;
