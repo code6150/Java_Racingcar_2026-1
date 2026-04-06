@@ -11,6 +11,9 @@ public class Application {
         String a = in.nextLine();
         List<Car> cars = new ArrayList<>();
         for (String name : a.split(",")) {
+            if (name.isEmpty()) {throw new IllegalArgumentException("왜안적음");}
+            if (name.length() > 5) {throw new IllegalArgumentException("이름5자초과됨");}
+            if (name.contains(" ")) {throw new IllegalArgumentException("공백포함됨");}
             cars.add(new Car(name));
         }
         Set<String> dupCheck = new HashSet<>();
