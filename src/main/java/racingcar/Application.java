@@ -32,17 +32,7 @@ public class Application {
             throw new IllegalArgumentException("숫자안적음");
         }
 
-        System.out.printf("%n실행 결과%n");
-        for (int i=n;i>0;i--) {
-            for (Car car : cars) {
-                int ran = Randoms.pickNumberInRange(0,9);
-                final int movingNumber = 4;
-                if (ran >= movingNumber) {car.move();}
-                String howMove = "-".repeat(car.getMoveCount());
-                System.out.printf("%s : %s%n", car.getName(),howMove);
-            }
-            System.out.println(" "); //한칸 띄기용
-        }
+
         Winner w = new Winner(cars);
         System.out.println("최종 우승자 : " + String.join(", ", w.findWinner()));
     }
