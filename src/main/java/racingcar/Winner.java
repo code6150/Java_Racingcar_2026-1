@@ -7,8 +7,7 @@ public class Winner {
     public Winner(List<Car> cars) {
         this.cars = cars;
     }
-
-    public List<String> ChooseWinner() {
+    public List<String> findWinner() {
         int max = 0;
         List<String> winners = new ArrayList<>();
         for (Car car : cars) {

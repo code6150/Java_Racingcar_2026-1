@@ -11,7 +11,6 @@ public class Application {
         String a = in.nextLine();
         List<Car> cars = new ArrayList<>();
         for (String name : a.split(",")) {
-
             cars.add(new Car(name));
         }
         Set<String> dupCheck = new HashSet<>();
@@ -41,7 +40,7 @@ public class Application {
             }
             System.out.println(" "); //한칸 띄기용
         }
-
-        System.out.println("최종 우승자 : " + String.join(", ", winners));
+        Winner w = new Winner(cars);
+        System.out.println("최종 우승자 : " + String.join(", ", w.findWinner()));
     }
 }
