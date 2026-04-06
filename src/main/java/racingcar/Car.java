@@ -1,8 +1,8 @@
 package racingcar;
 
 public class Car {
-    String name;
-    int moveCount;
+    private final String name;
+    private int moveCount;
 
     public Car(String name) {
         this.name = name;
@@ -13,6 +13,10 @@ public class Car {
         moveCount++;
     }
 
+
+    public String getName() {
+        return name;
+    }
     public int getMoveCount() {
         return moveCount;
     }

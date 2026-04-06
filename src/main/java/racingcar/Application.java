@@ -15,7 +15,7 @@ public class Application {
             cars.add(new Car(name));
         }
         Set<String> dupCheck = new HashSet<>();
-        for (Car c : cars){dupCheck.add(c.name);}
+        for (Car c : cars){dupCheck.add(c.getName());}
 
         if (dupCheck.size() != cars.size()) {throw new IllegalArgumentException("중복이름있음");}
 
@@ -37,7 +37,7 @@ public class Application {
                 final int movingNumber = 4;
                 if (ran >= movingNumber) {car.move();}
                 String howMove = "-".repeat(car.getMoveCount());
-                System.out.printf("%s : %s%n", car.name,howMove);
+                System.out.printf("%s : %s%n", car.getName(),howMove);
             }
             System.out.println(" "); //한칸 띄기용
         }

@@ -15,9 +15,9 @@ public class Winner {
             if (car.getMoveCount() > max) {
                 max = car.getMoveCount();
                 winners.clear();
-                winners.add(car.name);
+                winners.add(car.getName());
             } else if (car.getMoveCount() == max) {
-                winners.add(car.name);
+                winners.add(car.getName());
             }
         }
         return winners;
