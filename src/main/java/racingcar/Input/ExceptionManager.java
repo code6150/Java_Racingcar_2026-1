@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.Input;
 
 public class ExceptionManager {
     public void CarNameExcept(String name) {

@@ -7,7 +7,6 @@ public class Application {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        //부릉부릉
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         String a = in.nextLine();
         List<Car> cars = new ArrayList<>();
@@ -20,7 +19,6 @@ public class Application {
 
         if (dupCheck.size() != cars.size()) {throw new IllegalArgumentException("중복이름있음");}
 
-        //끼이익쾅
         System.out.println("시도할 회수는 몇회인가요?");
         int n;
         try {
@@ -44,20 +42,6 @@ public class Application {
             System.out.println(" "); //한칸 띄기용
         }
 
-        //띠리리리리리링
-        int max = 0;
-        List<String> winners = new ArrayList<>();
-        for (Car car : cars) {
-            if (car.getMoveCount() > max){
-                max = car.getMoveCount();
-                winners.clear();
-                winners.add(car.name);
-            } else if (car.getMoveCount() == max) {
-                winners.add(car.name);
-            }
-        }
-
-        //조아요 조아요
         System.out.println("최종 우승자 : " + String.join(", ", winners));
     }
 }
