@@ -2,8 +2,7 @@ package racingcar;
 import java.util.*;
 
 public class Winner {
-    List<Car> cars;
-
+    private final List<Car> cars;
     public Winner(List<Car> cars) {
         this.cars = cars;
     }
